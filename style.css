@@ -1,0 +1,783 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@font-face {
+    font-family: 'Menlo Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Menlo Regular'), url('Menlo-Regular.woff') format('woff');
+}
+
+:root {
+    --marginLeft: 77px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    margin: 14px 20px 0 27px;
+}
+
+header:hover {
+    cursor: pointer;
+}
+
+header h1 {
+    font-family: 'Karla', sans-serif;
+    font-size: 2.25rem;
+    margin-top: 5px;
+}
+
+main {
+    position: relative;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 150px;
+    margin-right: 10px;
+    padding-left: var(--marginLeft);
+}
+
+.intro h1 {
+    font-weight: 400;
+    font-size: 5.5rem;
+    line-height: 82px;
+    width: 100%;
+    color: rgb(25, 25, 25);
+}
+
+.intro p {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    margin-top: 58px;
+    color: rgba(20, 20, 32, 0.6);
+}
+
+.intro button {
+    margin-top: 40px;
+    margin-bottom: 220px;
+    height: 42px;
+    width: 130px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    opacity: 50%;
+    border: none;
+    cursor: pointer;
+    background: rgba(47, 128, 237, 1);
+    transition: opacity 0.3s ease;
+}
+
+.intro button:hover {
+    opacity: 80%;
+}
+
+.cards_container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        "card1 card1 card2"
+        "card3 card4 card2";
+    gap: 20px;
+    height: auto;
+    margin: 0 var(--marginLeft);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 40px 60px 0 60px;
+}
+
+.card img {
+    overflow: hidden;
+}
+
+#screen1{
+    width: calc(730px * 100%);
+    aspect-ratio: 2 / 1;
+    justify-self: end;
+}
+
+#screen2{
+    width: calc(334px * 100%);
+    aspect-ratio: 334 / 718;
+    height: 718px;
+}
+
+.card h5 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+.card p {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: white;
+    line-height: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.card1 {
+    grid-area: card1;
+    position: relative;
+    justify-content: space-between;
+    background: linear-gradient(to right bottom, #2F80ED, #579335);
+}
+
+.card1::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background: linear-gradient(to top, rgba(87, 147, 53, 1), rgba(0, 0, 0, 0.2) 10%, rgba(0, 0, 0, 0) 90%);
+    height: 6%;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+}
+
+.card2 {
+    grid-area: card2;
+    position: relative;
+    background: linear-gradient(to right bottom, #EB5757, #4E1781);
+}
+
+.card2::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background: linear-gradient(to top, rgba(78, 23, 129, 0.5), rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 80%);
+    height: 40%;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+}
+
+.card3 {
+    position: relative;
+    grid-area: card3;
+    background: linear-gradient(to right top, #141420, #43434D);
+    justify-content: space-between;
+    padding: 0;
+}
+
+.card3 h3 {
+    color: white;
+    font-family: 'Menlo Regular', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    width: 100%;
+    text-align: left;
+    margin: 0 0 1.25rem 1.25rem;
+}
+
+.card3 h5, .card3 p {
+    width: 100%;
+    text-align: right;
+}
+
+.card3_title {
+    margin: 38px 3.5rem 0 0;
+}
+
+.card4 {
+    position: relative;
+    grid-area: card4;
+    align-items: center;
+    background: #D9D9D9;
+    padding: 0;
+}
+
+.card4 h5{
+    width: 100%;
+    margin: 42px 0;
+    text-align: center;
+    font-size: 1.5625rem;
+    color: rgba(25, 25, 25, 1);
+}
+
+.icons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 5.5rem;
+}
+
+.fa-brands:hover {
+    cursor: pointer;
+}
+
+.text_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.text {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 64px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.text1, .text3 {
+    text-align: center;
+}
+
+.text2 {
+    padding-left: var(--marginLeft);
+    text-align: left;
+}
+
+.text3 {
+    padding-right: 300px;
+}
+
+.text4 {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.subscription_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 var(--marginLeft) 45px var(--marginLeft);
+    color: white;
+    background: rgb(20, 20, 32);
+    border-radius: 40px;
+}
+
+.subscription_title {
+    font-weight: 700;
+    font-size: 4rem;
+    margin: 80px 20px;
+    text-align: center;
+}
+
+.subscription_info {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+    margin: 0 80px 92px 120px;
+}
+
+.info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.info h6 {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+}
+
+.info p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 28px;
+    color: #89898f;
+}
+
+.info img {
+    width: 14px;
+    height: 14px;
+}
+
+.info_title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.text5 {
+    width: 100%;
+    text-align: left;
+    padding-left: 126px;
+}
+
+.price_container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin: 0 120px;
+}
+
+.price_card {
+    border-radius: 4px;
+    width: 366px;
+}
+
+.price_title {
+    margin: 25px 0 48px 25px;
+}
+
+.price_title h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.price_title p {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.price_info {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 85px 0 25px;
+}
+
+.price_info h1 {
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.price_info p {
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.monthly_price {
+    font-weight: 400;
+    font-size: 0.875rem;
+    margin: 0 0 20px 25px;
+}
+
+.price_card button {
+    margin: 0 0 57px 25px;
+    background: #171321;
+    color: white;
+    font-weight: 600;
+    font-size: 1.125rem;
+    border-radius: 5px;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.price_card button:hover {
+    transform: scale(1.05);
+}
+
+.price_card:nth-child(1) {
+    background: #F2F1F5;
+}
+
+.price_card:nth-child(2) {
+    background: #EEE7FD;
+}
+
+.price_card:nth-child(3) {
+    background: url("images/card_bg.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px 4px 100px 4px;
+}
+
+.price_card:nth-child(3) .price_title {
+    margin-bottom: 25px;
+}
+
+footer {
+    height: 200px;
+    width: 100%;
+    margin-top: 35px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background: #141420;
+    color: white;
+}
+
+footer p {
+    margin-left: 110px;
+    font-size: 0.9rem;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-right: var(--marginLeft);
+}
+
+footer li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+footer span {
+    margin: 0 13px;
+}
+
+@media screen and (max-width: 1280px) {
+    .cards_container {
+        gap: 15px;
+        margin: 0 30px;
+        grid-template-columns: repeat(3, calc(33vw - 20px));
+        max-width: calc(100vw - 60px);
+    }
+
+    .card {
+        padding: 30px 30px 0 30px;
+    }
+
+    .icons {
+        font-size: 4.5rem;
+    }
+
+    .card3_title {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --marginLeft: 40px;
+    }
+
+    .intro {
+        margin-top: 100px;
+    }
+
+    .intro h1 {
+        font-size: 4.5rem;
+    }
+
+    .intro button {
+        margin-bottom: 150px;
+    }
+
+    .cards_container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+            "card1 card1"
+            "card2 card3"
+            "card2 card4";
+        gap: 15px;
+        height: auto;
+    }
+
+    #screen2 {
+        height: auto;
+    }
+
+    .card {
+        padding: 30px 30px 0 30px;
+    }
+
+    .card3 {
+        justify-content: space-evenly;
+    }
+
+    .card3_title {
+        margin: 0;
+    }
+
+    .card3 h3 {
+        font-size: 2.5rem;
+        margin: 0 0 20px 0;
+    }
+
+    .card4 {
+        justify-content: space-around;
+    }
+
+    .card4 h5 {
+        margin: 0;
+    }
+
+    .icons {
+        font-size: 4rem;
+    }
+
+    .text {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .text3 {
+        padding-right: 100px;
+    }
+
+    .text4 {
+        padding-left: 200px;
+    }
+
+    .subscription_container {
+        border-radius: 30px;
+        margin: 0 10px 30px 10px;
+    }
+
+    .subscription_title {
+        font-size: 3rem;
+        margin: 60px 30px;
+    }
+
+    .subscription_info {
+        margin: 0 40px 60px 40px;
+    }
+
+    .text5 {
+        padding: 0;
+        text-align: center;
+    }
+
+    .price_container {
+        gap: 25px;
+        margin: 0 40px;
+    }
+
+    .price_card {
+        width: 100%;
+        max-width: 330px;
+        margin: 0;
+    }
+
+    footer {
+        height: 150px;
+    }
+
+    footer p {
+        margin-left: 20px;
+    }
+
+    footer span {
+        margin: 0 8px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    :root {
+        --marginLeft: 20px;
+    }
+
+    header {
+        margin-left: 10px;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+        margin-top: 10px;
+    }
+
+    .intro {
+        margin-top: 100px;
+    }
+
+    .intro h1 {
+        font-size: 3rem;
+        margin-right: 10px;
+        line-height: 50px;
+    }
+
+    .intro p {
+        font-size: 0.875rem;
+    }
+
+    .intro button {
+        font-size: 0.875rem;
+        margin-bottom: 110px;
+    }
+
+    .cards_container {
+        grid-template-columns: repeat(2, calc(50vw - 25px));
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+            "card1 card1"
+            "card2 card2"
+            "card2 card2"
+            "card3 card4";
+        height: auto;
+        gap: 10px;
+    }
+
+    #screen2 {
+        height: auto;
+    }
+
+    .card {
+        border-radius: 10px;
+        padding: 30px 20px 0 20px;
+    }
+
+    .card1::before, .card2::before {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .card3, .card4 {
+        padding-top: 0;
+        align-items: center;
+    }
+
+    .card3 p, .card3 h3, .card3 h5 {
+        text-align: center;
+    }
+
+    .card3 h3 {
+        font-size: 1.4rem;
+        margin: 0 0 20px 0;
+    }
+
+    .card3_title {
+        margin: 20px 0 0 0; 
+        align-items: center;
+        justify-content: center;   
+    }
+
+    .card4 h5 {
+        font-size: 1.25rem;
+        margin: 20px 0 60px 0;
+    }
+
+    .icons {
+        font-size: 2rem;
+        gap: 15px;
+    }
+
+    .text {
+        font-size: 2rem;
+        line-height: 32px;
+        margin-bottom: 40px;
+    }
+
+    .text3 {
+        padding-right: 0;
+    }
+
+    .text4 {
+        padding-right: 20px;
+        padding-left: 100px;
+    }
+
+    .subscription_container {
+        margin: 0 0 20px 0;
+        border-radius: 20px;
+    }
+
+    .subscription_title {
+        font-size: 2rem;
+        margin: 40px 10px;
+    }
+
+    .subscription_info {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+        margin: 0 20px 30px 20px;
+    }
+
+    .info h6 {
+        font-size: 0.875rem;
+    }
+
+    .info p {
+        line-height: 1.5rem;
+        font-size: 0.875rem;
+    }
+
+    .text5 {
+        padding: 0;
+        text-align: center;
+    }
+
+    .price_container {
+        margin: 0;
+        gap: 20px;
+    }
+
+    .price_card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .price_title {
+        margin: 15px 0 20px 25px; 
+    }
+
+    .price_title h1 {
+        font-size: 2rem;
+    }
+
+    .price_title p {
+        font-size: 1rem;
+    }
+
+    .price_info {
+        margin: 0 50px 0 25px;
+    }
+
+    .price_info h1 {
+        font-size: 3rem;
+    }
+
+    .price_info p, .monthly_price {
+        font-size: 0.75rem;
+    }
+
+    .price_card button {
+        margin: 0 0 30px 25px;
+        font-size: 1rem;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    footer ul {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        margin: 0;
+    }
+
+    footer span {
+        display: none;
+    }
+}
