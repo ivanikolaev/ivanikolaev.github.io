@@ -112,15 +112,15 @@ main {
 }
 
 #screen1{
-    width: calc(730px * 100%);
-    aspect-ratio: 2 / 1;
-    justify-self: end;
+    width: calc(2022px * 100%);
+    max-width: 730px;
+    aspect-ratio: 2022 / 1154;
 }
 
 #screen2{
-    width: calc(334px * 100%);
-    aspect-ratio: 334 / 718;
-    height: 718px;
+    width: calc(826px * 100%);
+    max-width: 400px;
+    aspect-ratio: 826 / 1340;
 }
 
 .card h5 {
@@ -159,6 +159,7 @@ main {
 .card2 {
     grid-area: card2;
     position: relative;
+    justify-content: space-between;
     background: linear-gradient(to right bottom, #EB5757, #4E1781);
 }
 
@@ -453,12 +454,16 @@ footer span {
     .cards_container {
         gap: 15px;
         margin: 0 30px;
-        grid-template-columns: repeat(3, calc(33vw - 20px));
+        grid-template-columns: repeat(3, 1fr);
         max-width: calc(100vw - 60px);
     }
 
     .card {
         padding: 30px 30px 0 30px;
+    }
+
+    #screen2 {
+        max-width: 400px;
     }
 
     .icons {
@@ -488,7 +493,7 @@ footer span {
     }
 
     .cards_container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, calc(50vw - 40px));
         grid-template-rows: repeat(3, auto);
         grid-template-areas: 
             "card1 card1"
@@ -621,8 +626,9 @@ footer span {
     }
 
     .cards_container {
-        grid-template-columns: repeat(2, calc(50vw - 25px));
+        grid-template-columns: repeat(2, calc(48vw - 15px));
         grid-template-rows: repeat(4, auto);
+        margin: 0 2vw;
         grid-template-areas: 
             "card1 card1"
             "card2 card2"
@@ -651,7 +657,7 @@ footer span {
     }
 
     .card3 p, .card3 h3, .card3 h5 {
-        text-align: center;
+        text-align: left;
     }
 
     .card3 h3 {
