@@ -493,7 +493,7 @@ footer span {
     }
 
     .cards_container {
-        grid-template-columns: repeat(2, calc(50vw - 40px));
+        grid-template-columns: repeat(2, calc(50vw - 30px));
         grid-template-rows: repeat(3, auto);
         grid-template-areas: 
             "card1 card1"
@@ -626,7 +626,7 @@ footer span {
     }
 
     .cards_container {
-        grid-template-columns: repeat(2, calc(48vw - 15px));
+        grid-template-columns: repeat(2, calc(48vw - 10px));
         grid-template-rows: repeat(4, auto);
         margin: 0 2vw;
         grid-template-areas: 
