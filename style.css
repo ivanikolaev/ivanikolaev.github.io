@@ -82,6 +82,12 @@ main {
     transition: opacity 0.3s ease;
 }
 
+.intro button a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
 .intro button:hover {
     opacity: 80%;
 }
@@ -222,6 +228,11 @@ main {
     width: 100%;
     justify-content: space-evenly;
     font-size: 5.5rem;
+}
+
+.icons a {
+    text-decoration: none;
+    color: black;
 }
 
 .fa-brands:hover {
